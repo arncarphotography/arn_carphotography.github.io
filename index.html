@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ARN Car Photography</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080808;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(8, 8, 8, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 14px;
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 7% 80px;
+            background:
+                radial-gradient(circle at 80% 30%, #252525 0%, transparent 35%),
+                linear-gradient(135deg, #080808, #151515);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero p {
+            color: #aaa;
+            font-size: 16px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 10vw, 120px);
+            line-height: 0.95;
+            letter-spacing: -5px;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 span {
+            color: #888;
+        }
+
+        .hero-description {
+            max-width: 550px;
+            color: #aaa;
+            font-size: 18px;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 28px;
+            border: 1px solid #555;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: white;
+            color: black;
+        }
+
+        section {
+            padding: 100px 7%;
+        }
+
+        .section-title {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            color: #888;
+            margin-bottom: 50px;
+        }
+
+        .about {
+            max-width: 800px;
+        }
+
+        .about p {
+            color: #aaa;
+            font-size: 18px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .photo {
+            aspect-ratio: 4 / 5;
+            background:
+                linear-gradient(135deg, #222, #111);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 14px;
+            overflow: hidden;
+            transition: 0.4s;
+        }
+
+        .photo:hover {
+            transform: scale(1.02);
+        }
+
+        .photo span {
+            border: 1px solid #444;
+            padding: 10px 15px;
+        }
+
+        .contact {
+            text-align: center;
+            background: #111;
+        }
+
+        .contact p {
+            color: #999;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            padding: 30px 7%;
+            text-align: center;
+            color: #555;
+            font-size: 13px;
+        }
+
+        @media (max-width: 800px) {
+            nav {
+                padding: 18px 5%;
+            }
+
+            nav a {
+                margin-left: 12px;
+                font-size: 12px;
+            }
+
+            section {
+                padding: 80px 5%;
+            }
+
+            .hero {
+                padding: 120px 5% 80px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">ARN.</div>
+
+        <div>
+            <a href="#about">ABOUT</a>
+            <a href="#portfolio">PORTFOLIO</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+    </nav>
+
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p>Automotive Photography</p>
+
+            <h1>
+                ARN<br>
+                <span>CAR PHOTOGRAPHY</span>
+            </h1>
+
+            <div class="hero-description">
+                Capturing cars, details and moments through my lens.
+                Welcome to my automotive photography portfolio.
+            </div>
+
+            <a class="button" href="#portfolio">
+                VIEW PORTFOLIO
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section id="about">
+
+        <div class="about">
+
+            <h2 class="section-title">ABOUT ME</h2>
+
+            <p class="section-subtitle">
+                Automotive photographer
+            </p>
+
+            <p>
+                Welcome to ARN Car Photography.
+                I am passionate about cars and photography and
+                love combining both to create unique automotive images.
+            </p>
+
+            <br>
+
+            <p>
+                From detailed close-ups to dynamic rolling shots,
+                my goal is to capture the character and atmosphere
+                of every car.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section id="portfolio">
+
+        <h2 class="section-title">PORTFOLIO</h2>
+
+        <p class="section-subtitle">
+            Selected automotive photography
+        </p>
+
+        <div class="gallery">
+
+            <div class="photo">
+                <span>YOUR PHOTO 01</span>
+            </div>
+
+            <div class="photo">
+                <span>YOUR PHOTO 02</span>
+            </div>
+
+            <div class="photo">
+                <span>YOUR PHOTO 03</span>
+            </div>
+
+            <div class="photo">
+                <span>YOUR PHOTO 04</span>
+            </div>
+
+            <div class="photo">
+                <span>YOUR PHOTO 05</span>
+            </div>
+
+            <div class="photo">
+                <span>YOUR PHOTO 06</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">LET'S CONNECT</h2>
+
+        <p>
+            Interested in a photoshoot or want to see more of my work?
+        </p>
+
+        <a class="button" href="mailto:aaronborck00@gmail.com">
+            CONTACT ME
+        </a>
+
+    </section>
+
+
+    <footer>
+        © 2026 ARN Car Photography · All Rights Reserved
+    </footer>
+
+</body>
+</html>
